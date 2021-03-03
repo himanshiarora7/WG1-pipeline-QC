@@ -6,9 +6,9 @@ refs:
   fasta19: /path/to/hg19fasta.fa
 
 inputs:
-  singularity_image: /path/to/singularity/image.sif ### The complete path to the singularity image that has all the softwares
+  singularity_image: /directflow/SCCGGroupShare/projects/himaro/Drew_Imputation/WG1-pipeline-QC_imputation.sif ### The complete path to the singularity image that has all the softwares
   vcf: /path/to/input.vcf ### can be either hg19 or hg38
-  bind_paths: /paths/to/bind ### List of paths to bind to Singularity. You can specify multiple directories by adding a "," between them. Eg. ${DIRECTORY1},${DIRECTORY2} 
+  bind_paths: /directflow/SCCGGroupShare ### List of paths to bind to Singularity. You can specify multiple directories by adding a "," between them. Eg. ${DIRECTORY1},${DIRECTORY2} 
   psam_file: /path/to/psam/file.psam ### Path to a fam file in plink format per https://www.cog-genomics.org/plink2/formats#fam with the following columns (LABELED): 1.  sFamily ID ('FID'); 2. Within-family ID ('IID'; cannot be '0') 3. Within-family ID of father ('0' if father isn't in dataset) 4. Within-family ID of mother ('0' if mother isn't in dataset) 5. Sex code ('1' = male, '2' = female, '0' = unknown) 6. Provided_Ancestry('AFR' = African, 'AMR' = Ad Mixed American, 'EAS' = East Asian, 'EUR' = European, 'SAS' = South Asian)
   
 outputs:
